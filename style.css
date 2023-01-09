@@ -19,6 +19,9 @@
     text-transform: capitalize;
     transition: all .2s linear;
 }
+body{
+    min-height: 100vh;
+}
 
 html {
     font-size: 62.5%;
@@ -41,8 +44,12 @@ html {
 }
 
 footer{
-    margin-left: 27%;
-    padding: 49rem 10%; 
+    /* margin-left: 27%; */
+    /* padding: 4rem 10%;  */
+    top: 95%;
+    left: 39%;
+    position: fixed;
+    color: #c9c9c9af;
 }
 
 header .logo {
@@ -76,8 +83,8 @@ header .icons i:hover {
 }
  
 nav{
-    background: #fff;
-    padding: 2%;
+    background: #8b8b8b44;
+    padding: 1%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -99,4 +106,125 @@ nav{
 
 header .icons #menu-bars{
     display: none;
+}
+.container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: url(./img/github-wallpapers.png) center center no-repeat fixed;
+    background-size: cover;
+}
+.bubbles{
+    position: relative;
+    display: flex;
+    z-index: 1;
+}
+.bubbles span{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #4fc3dc;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #4fc3dc44, 0 0 50px #4fc3dc, 0 0 100px #4fc3dc;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s/ var(--i)) ;
+
+}
+.bubbles span:nth-child(even){
+    background: #ff2d75;
+    box-shadow: 0 0 10px #ff2d7544, 0 0 50px #ff2d75, 0 0 100px #ff2d75;
+   
+}
+.box{
+    position: relative;
+    height: 200px;
+    top: 270px;
+    left: 350px;
+    transform-style: preserve-3d;
+    animation: turn 15s linear infinite ;
+}
+@keyframes turn{
+    0%{
+      transform: rotateX(-20deg) rotateY(360deg);  
+    }
+    100%
+    {
+        transform: rotateX(-20deg) rotateY(0deg);
+    }
+}
+.box div{
+    position: absolute;
+    inset: 0;
+    transform-style: preserve-3d;
+}
+.box div.block span{
+     position: absolute;
+     left: calc(50% - 100px);
+     width: 202px;
+     height: 100px;
+     background: #444;
+     transform: rotateY(calc(90deg * var(--i))) translateZ(100px);
+     transform: 0.5s;
+}
+.box div.text span{
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     transform: rotateY(calc(90deg * var(--i))) translateZ(150px);
+     cursor: pointer;
+     color: #fff;
+     font-size: 7em;
+     font-weight: bold;
+     text-transform: uppercase;
+     z-index: 10;
+     line-height: 1em;
+     -webkit-text-stroke: 3px #000;
+     transform-style: preserve-3d;
+}
+.box div.text span:nth-child(1){
+     font-size: 6em;
+}
+.box div.text span::before{
+     content: attr(data-text);
+     position: absolute;
+     bottom: 50px;
+     transform-origin: bottom;
+     transform: rotateX(-90deg);
+     color: rgba(0, 0, 0, 0.1);
+     -webkit-text-stroke: 4px #000;
+     filter: blur(5px);
+}
+.box div.text span::after{
+    content: '';
+    position: absolute;
+    top: 100px; 
+    width: 360px;
+    height: 60px;
+    background: #444;
+    transform: rotateX(-90deg);
+    transition: 0.1s;
+}
+.box:hover div.text span::after{
+    background: var(--orange);
+    filter: drop-shadow(0 0 50px var(--orange));
+}
+.box:hover div.block span{
+    background: var(--orange);
+    filter: drop-shadow(0 0 90px var(--orange));
+}
+
+@keyframes animate {
+    0%
+    {
+        transform: translateY(100vh) scale(0);
+    }
+    100%
+    {
+        transform: translateY(-10vh) scale(1);
+    }
 }
