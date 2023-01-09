@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2? famille= Nunito:wght@200;300;400;600;700 & display=swap');
+
+:root {
+    --orange: rgba(252, 137, 7, 0.959);
+    --black: #192a56;
+    --light-color: #666;
+    --box-shadow: 0.5rem 1.5rem rgba(0, 0, 0, .1);
+
+}
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+}
+
+ header {
+    position: relative;
+    top: 0;
+    
+    background: rgb(50, 42, 85);
+    padding: 3rem 27%;
+    margin-block: 0rem ;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    z-index: var(--box-shadow); 
+}
+
+footer{
+    margin-left: 27%;
+    padding:  430px 10%; 
+}
+
+header .logo {
+    /* margin-left: 0%; */
+    color: var(--orange);
+    font-size: 2.5rem;
+    font-weight: bolder;
+    justify-content: center;
+    left: 2%;
+}
+
+header .logo i {
+    color: var(--orange);
+    display: flex;
+    width: 2000px;
+}
+
+header .icons i {
+    cursor: pointer;
+    margin-left: .5rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    width: 4.5rem;
+    text-align: center;
+    font-size: 1.7rem;
+    color: var(--black);
+    border-radius: 50%;
+    background: #eee;
+}
+
+header .icons i:hover {
+    color: #fff;
+    background: var(--orange);
+    transform: rotate(360deg);
+}
+ 
+nav{
+    background: #fff;
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.navbar a{
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    color: var(--black);
+}
+
+.navbar a.active,
+.navbar a:hover{
+    color: #fff;
+    background: var(--orange);
+} 
+
+header .icons #menu-bars{
+    display: none;
+}
