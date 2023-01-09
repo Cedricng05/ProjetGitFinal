@@ -102,6 +102,7 @@ nav{
 .navbar a:hover{
     color: #fff;
     background: var(--orange);
+    transform: scale(1.2);
 } 
 
 header .icons #menu-bars{

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cedric page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="ngokobi.css">
+</head>
+
+<body>
+
+    <style>
+        .loader-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10000;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        .loader-container.fade-out {
+            top: -120%;
+        }
+    </style>
+
+    <header class="bloc">
+        <a href="#" class="logo"><i class=" fa fa-brands fa-github "> GROUPE N°2</i></a>
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+        </div>
+    </header>
+    <header class="nomMembre">
+        <div id="aboutMe">
+            <h3><!--<strong> Nom du membre :</strong>-->
+                <p>NGOKOBI CEDRIC</p>
+            </h3>
+        </div>
+
+    </header>
+    <div class="contenu">
+        <nav class="navbar">
+            <button class="menu"><a class="" href="ngokobi.html">Menu1</a></button>
+            <button class="backHome"><i class="fa fa-home"><a href="index.html">Home</a></i></button>
+        </nav>
+
+    </div>
+    <div>
+
+    </div>
+
+    <!--<a href="#"><button class="topbtn"><i class="fa-solid fa-angle-up"></i></button></a>-->
+    <!--<img src="GitHub.png" alt="img">-->
+
+    <footer class="footer">
+
+        <div class="footer-contenu">
+            <div class="reseau">
+                <ul>
+                    <li><a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="https://github.com/"><i class="fa-brands fa-github"></i></a></li>
+                    <li><a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://snapchat.com/"><i class="fa-brands fa-snapchat"></i></a></li>
+                    <!--<li><a href="https://youtube.com/"><i class="fa-brands fa-youtube"></i></a></li>-->
+
+                </ul>
+            </div>
+            <h2>&copy; 2023 Reserved by GROUPE 2 </h2>
+        </div>
+
+    </footer>
+    <div class="loader-container">
+        <img src="start.gif" alt="">
+    </div>
+
+    <script>
+        function loader() {
+            document.querySelector('.loader-container').classList.add('fade-out');
+        }
+
+        function fadeOut() {
+            setInterval(loader, 3000);
+        }
+        window.onload = fadeOut();
+    </script>
+
+</body>
+
+</html>

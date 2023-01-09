@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,87 +10,124 @@
     <link rel="stylesheet" href="style.css">
     <title>Git Project</title>
 </head>
+
 <body>
+
+    <style>
+        .loader-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10000;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        .loader-container.fade-out {
+            top: -120%;
+        }
+    </style>
+
     <header>
         <a href="#" class="logo"><i class=" fas fa-school "> GROUPE N°2</i></a>
         <div class="icons">
             <i class="fas fa-bars" id="menu-bars"></i>
         </div>
-    </header>  
+    </header>
     <nav class="navbar">
-        <a class="" href="menu.html"><i>Ngokobi</i></a>
+        <a class="" href="ngokobi.html"><i>Ngokobi</i></a>
 
         <a href="menu2.html"><i>Atem</i></a>
         <a href="menu3.html"><i>Kouontchou</i></a>
         <a href="menu4.html"><i>Tchinda</i></a>
-        <a href=""><i>Ambassa</i></a>
-        <a href=""><i>Njeupa</i></a>
+        <a href="Ambassa.html"><i>Ambassa</i></a>
+        <a href="njeupa.html"><i>Njeupa</i></a>
         <a href="Manekou.html"><i>Manekou</i></a>
-        <a href=""><i>Bidias</i></a>
+        <a href="bidias.html"><i>Bidias</i></a>
     </nav>
 
-    <div class="container" >
+    <div class="container">
 
         <div class="bubbles"><!--Voici Les duex div que j'ai rajouter au css -->
-           <span style="--i:11;"></span>
-           <span style="--i:12;"></span>
-           <span style="--i:24;"></span>
-           <span style="--i:10;"></span>
-           <span style="--i:14;"></span>
-           <span style="--i:23;"></span>
-           <span style="--i:18;"></span>
-           <span style="--i:16;"></span>
-           <span style="--i:19;"></span>
-           <span style="--i:20;"></span>
-           <span style="--i:22;"></span>
-           <span style="--i:25;"></span>
-           <span style="--i:18;"></span>
-           <span style="--i:21;"></span>
-           <span style="--i:15;"></span>
-           <span style="--i:13;"></span>
-           <span style="--i:26;"></span>
-           <span style="--i:17;"></span>
-           <span style="--i:13;"></span>
-           <span style="--i:28;"></span>
-           <span style="--i:11;"></span>
-           <span style="--i:12;"></span>
-           <span style="--i:24;"></span>
-           <span style="--i:10;"></span>
-           <span style="--i:14;"></span>
-           <span style="--i:23;"></span>
-           <span style="--i:18;"></span>
-           <span style="--i:16;"></span>
-           <span style="--i:19;"></span>
-           <span style="--i:20;"></span>
-           <span style="--i:22;"></span>
-           <span style="--i:25;"></span>
-           <span style="--i:18;"></span>
-           <span style="--i:21;"></span>
-           <span style="--i:15;"></span>
-           <span style="--i:13;"></span>
-           <span style="--i:26;"></span>
-           <span style="--i:17;"></span>
-           <span style="--i:13;"></span>
-           <span style="--i:28;"></span>
+            <span style="--i:11;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:24;"></span>
+            <span style="--i:10;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:23;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:20;"></span>
+            <span style="--i:22;"></span>
+            <span style="--i:25;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:21;"></span>
+            <span style="--i:15;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:26;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:28;"></span>
+            <span style="--i:11;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:24;"></span>
+            <span style="--i:10;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:23;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:20;"></span>
+            <span style="--i:22;"></span>
+            <span style="--i:25;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:21;"></span>
+            <span style="--i:15;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:26;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:28;"></span>
         </div>
         <div class="box">
-        <div class="block">
-            <span style="--i:0;"></span>
-            <span style="--i:1;"></span>
-            <span style="--i:2;"></span>
-            <span style="--i:3;"></span>
+            <div class="block">
+                <span style="--i:0;"></span>
+                <span style="--i:1;"></span>
+                <span style="--i:2;"></span>
+                <span style="--i:3;"></span>
+            </div>
+            <div class="text">
+                <span style="--i:0;" data-text="GROUPE">GROUPE 2 </span>
+                <span style="--i:1;" data-text="GitHub">GitHub</span>
+                <span style="--i:2;" data-text="B2">B2</span>
+                <span style="--i:3;" data-text="Keyce">Keyce</span>
+            </div>
         </div>
-        <div class="text">
-            <span style="--i:0;" data-text="GROUPE">GROUPE 2 </span>
-            <span style="--i:1;" data-text="GitHub">GitHub</span>
-            <span style="--i:2;" data-text="B2">B2</span>
-            <span style="--i:3;" data-text="Keyce">Keyce</span>
-        </div>
-        </div>
-    </div> 
+    </div>
     <footer>
         <h2>&copy; Copyright tous droits réservés Groupe N°2 </h2>
     </footer>
-    
+
+    <div class="loader-container">
+        <img src="Loader2.gif" alt="">
+    </div>
+
+    <script>
+        function loader() {
+            document.querySelector('.loader-container').classList.add('fade-out');
+        }
+
+        function fadeOut() {
+            setInterval(loader, 3000);
+        }
+        window.onload = fadeOut();
+    </script>
+
 </body>
+
 </html>
